@@ -13,21 +13,7 @@ box-sizing:border-box;
 font-family:sans-serif;
 }
 
-body{  <body>
-
-<button onclick="showTier()">選手Tier表</button>
-
-<div id="tierArea" style="display:none;">
-  <img src="tier.png" style="max-width:100%;">
-
-  <br><br>
-
-  <button onclick="goHome()">ホームに戻る</button>
-</div>
-
-background:#f3f5f7;
-}
-
+body{
 header{
 background:#0078ff;
 color:white;
@@ -184,4 +170,25 @@ flex-wrap:wrap;
 </footer>
 
 </body>
+</html>
+<footer>
+
+  <script>
+
+function showTier() {
+
+  document.getElementById("tierArea").style.display = "block";
+
+}
+
+function goHome() {
+
+  document.getElementById("tierArea").style.display = "none";
+
+}
+
+</script>
+
+</body>
+
 </html>
