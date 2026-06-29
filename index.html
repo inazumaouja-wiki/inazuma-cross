@@ -1,37 +1,56 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>イナズマイレブンWiki</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(135deg, #050816, #0b1a3a);
+  color: white;
+}
 
-<header>
-  <h1>イナズマイレブンWiki</h1>
-  <p>非公式ファンサイト</p>
-</header>
+header {
+  background: #1e3cff;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 0 20px #1e3cff;
+}
 
-<nav>
-  <a href="index.html">ホーム</a>
-  <a href="pages/characters.html">キャラ</a>
-  <a href="pages/teams.html">チーム</a>
-  <a href="pages/story.html">ストーリー</a>
-</nav>
+header h1 {
+  margin: 0;
+  letter-spacing: 2px;
+}
 
-<main>
-  <h2>ようこそ</h2>
-  <p>このサイトはイナズマイレブンの情報をまとめたWiki風サイトです。</p>
+nav {
+  background: #0a0f22;
+  padding: 12px;
+  text-align: center;
+}
 
-  <div class="card">
-    <h3>最新更新</h3>
-    <p>・キャラページ追加</p>
-  </div>
-</main>
+nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-<footer>
-  <p>© ファンサイト</p>
-</footer>
+nav a:hover {
+  color: #1e3cff;
+}
 
-</body>
-</html>
+main {
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(30,60,255,0.4);
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(30,60,255,0.2);
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #0a0f22;
+  margin-top: 40px;
+  opacity: 0.7;
+}
