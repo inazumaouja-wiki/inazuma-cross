@@ -71,7 +71,6 @@ nav a{
   background:#f0f6ff;
 }
 
-/* カード */
 .card{
   border:1px solid #ddd;
   border-radius:10px;
@@ -85,7 +84,6 @@ nav a{
   margin-bottom:10px;
 }
 
-/* 画像 */
 img{
   width:100%;
   max-width:900px;
@@ -93,7 +91,6 @@ img{
   display:block;
 }
 
-/* 非表示 */
 #tierArea,
 #calendarArea,
 #trainingArea{
@@ -129,7 +126,6 @@ footer{
 
 <nav>
 <a href="#">最新情報</a>
-<a href="#">最強ランキング</a>
 <a href="#">ストーリー</a>
 <a href="#">掲示板</a>
 </nav>
@@ -163,13 +159,21 @@ footer{
 <p>イナズマイレブン クロス攻略Wiki制作中！</p>
 </div>
 
+<!-- ★ここにシミュレーター入れた -->
 <div class="card">
-<h3>最強ランキング</h3>
-<ol>
-<li>SSランク</li>
-<li>Sランク</li>
-<li>Aランク</li>
-</ol>
+<h3>シミュレーター</h3>
+
+<iframe 
+  src="https://inaire-asset.vercel.app/#/"
+  style="width:100%; height:700px; border:none;">
+</iframe>
+
+<br><br>
+
+<a href="https://inaire-asset.vercel.app/#/" target="_blank">
+  別タブで開く
+</a>
+
 </div>
 
 </div>
@@ -194,9 +198,8 @@ footer{
 </div>
 </div>
 
-<!-- 育成ガイド（★ここが改善ポイント） -->
+<!-- 育成ガイド -->
 <div id="trainingArea">
-
 <div class="card">
 <h3>育成ガイド①</h3>
 <img src="IMG_8904.jpeg">
@@ -219,7 +222,6 @@ footer{
 
 <br>
 <button onclick="goHome()">ホームに戻る</button>
-
 </div>
 
 </div>
