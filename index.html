@@ -17,6 +17,7 @@ body{
   background:#f5f5f5;
 }
 
+/* ヘッダー */
 header{
   background:#0078ff;
   color:white;
@@ -26,6 +27,7 @@ header{
   font-weight:bold;
 }
 
+/* ナビ */
 nav{
   background:white;
   display:flex;
@@ -41,6 +43,7 @@ nav a{
   font-weight:bold;
 }
 
+/* メインレイアウト */
 .container{
   max-width:1100px;
   margin:20px auto;
@@ -50,6 +53,7 @@ nav a{
   padding:10px;
 }
 
+/* サイドバー */
 .sidebar,.content{
   background:white;
   border-radius:10px;
@@ -57,6 +61,7 @@ nav a{
   box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
+/* メニュー */
 .menu{
   list-style:none;
 }
@@ -71,6 +76,7 @@ nav a{
   background:#f0f6ff;
 }
 
+/* カード */
 .card{
   border:1px solid #ddd;
   border-radius:10px;
@@ -79,21 +85,48 @@ nav a{
   background:white;
 }
 
+/* タイトル */
 .card h3{
   color:#0078ff;
   margin-bottom:10px;
 }
 
+/* 画像 */
+img{
+  width:100%;
+  max-width:900px;
+  height:auto;
+  display:block;
+}
+
+/* Tier非表示 */
 #tierArea{
   display:none;
 }
 
+/* ホーム */
+#homeArea{
+  display:block;
+}
+
+/* フッター */
 footer{
   background:#222;
   color:white;
   text-align:center;
   padding:20px;
   margin-top:30px;
+}
+
+/* レスポンシブ */
+@media(max-width:768px){
+  .container{
+    grid-template-columns:1fr;
+  }
+
+  nav{
+    flex-wrap:wrap;
+  }
 }
 </style>
 
@@ -115,12 +148,12 @@ footer{
 
 <div class="container">
 
+<!-- サイド -->
 <div class="sidebar">
 
 <h2>攻略メニュー</h2>
 
 <ul class="menu">
-
 <li>🏠 トップ</li>
 
 <li onclick="showTier()">🏆 選手Tier表</li>
@@ -135,22 +168,20 @@ footer{
 
 </div>
 
+<!-- メイン -->
 <div class="content">
 
-<!-- Tier表示 -->
+<!-- Tier -->
 <div id="tierArea">
+  <div class="card">
+    <h3>選手Tier表</h3>
 
-<div class="card">
-<h3>選手Tier表</h3>
+    <img src="IMG_8889.jpeg">
 
-<!-- ★ここが画像 -->
-<img src="IMG_8889.jpeg" style="max-width:100%;">
+    <br><br>
 
-<br><br>
-
-<button onclick="goHome()">ホームに戻る</button>
-</div>
-
+    <button onclick="goHome()">ホームに戻る</button>
+  </div>
 </div>
 
 <!-- ホーム -->
