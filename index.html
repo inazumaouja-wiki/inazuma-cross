@@ -84,6 +84,7 @@ nav a{
   margin-bottom:10px;
 }
 
+/* 画像 */
 img{
   width:100%;
   max-width:900px;
@@ -91,7 +92,10 @@ img{
   display:block;
 }
 
-#tierArea, #calendarArea{
+/* 非表示エリア */
+#tierArea,
+#calendarArea,
+#trainingArea{
   display:none;
 }
 
@@ -131,7 +135,7 @@ footer{
 
 <div class="container">
 
-<!-- サイドバー -->
+<!-- サイド -->
 <div class="sidebar">
 
 <h2>攻略メニュー</h2>
@@ -144,8 +148,9 @@ footer{
 
 <li onclick="showCalendar()">📅 試練カレンダー</li>
 
+<li onclick="showTraining()">📘 育成ガイド</li>
+
 <li>🎁 リセマラ</li>
-<li>👥 キャラ一覧</li>
 <li>🎮 初心者ガイド</li>
 
 </ul>
@@ -170,17 +175,6 @@ footer{
 <li>Sランク</li>
 <li>Aランク</li>
 </ol>
-</div>
-
-<div class="card">
-<h3>おすすめ攻略</h3>
-<ul>
-<li>序盤攻略</li>
-<li>リセマラランキング</li>
-<li>最強チーム編成</li>
-<li>育成方法</li>
-<li>全キャラ一覧</li>
-</ul>
 </div>
 
 </div>
@@ -215,6 +209,24 @@ footer{
 
 </div>
 
+<!-- 育成ガイド -->
+<div id="trainingArea">
+
+<div class="card">
+<h3>育成ガイド</h3>
+
+<img src="IMG_8904.jpeg">
+<img src="IMG_8903.jpeg">
+<img src="IMG_8902.jpeg">
+<img src="IMG_8900.jpeg">
+
+<br><br>
+
+<button onclick="goHome()">ホームに戻る</button>
+</div>
+
+</div>
+
 </div>
 
 <footer>
@@ -225,20 +237,30 @@ footer{
 
 function showTier() {
   document.getElementById("tierArea").style.display = "block";
-  document.getElementById("homeArea").style.display = "none";
   document.getElementById("calendarArea").style.display = "none";
+  document.getElementById("trainingArea").style.display = "none";
+  document.getElementById("homeArea").style.display = "none";
 }
 
 function showCalendar() {
   document.getElementById("calendarArea").style.display = "block";
-  document.getElementById("homeArea").style.display = "none";
   document.getElementById("tierArea").style.display = "none";
+  document.getElementById("trainingArea").style.display = "none";
+  document.getElementById("homeArea").style.display = "none";
+}
+
+function showTraining() {
+  document.getElementById("trainingArea").style.display = "block";
+  document.getElementById("tierArea").style.display = "none";
+  document.getElementById("calendarArea").style.display = "none";
+  document.getElementById("homeArea").style.display = "none";
 }
 
 function goHome() {
   document.getElementById("homeArea").style.display = "block";
   document.getElementById("tierArea").style.display = "none";
   document.getElementById("calendarArea").style.display = "none";
+  document.getElementById("trainingArea").style.display = "none";
 }
 
 </script>
