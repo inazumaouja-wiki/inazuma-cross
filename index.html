@@ -17,7 +17,6 @@ body{
   background:#f5f5f5;
 }
 
-/* ヘッダー */
 header{
   background:#0078ff;
   color:white;
@@ -27,7 +26,6 @@ header{
   font-weight:bold;
 }
 
-/* ナビ */
 nav{
   background:white;
   display:flex;
@@ -43,7 +41,6 @@ nav a{
   font-weight:bold;
 }
 
-/* メインレイアウト */
 .container{
   max-width:1100px;
   margin:20px auto;
@@ -53,7 +50,6 @@ nav a{
   padding:10px;
 }
 
-/* サイドバー */
 .sidebar,.content{
   background:white;
   border-radius:10px;
@@ -61,7 +57,6 @@ nav a{
   box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
-/* メニュー */
 .menu{
   list-style:none;
 }
@@ -76,7 +71,6 @@ nav a{
   background:#f0f6ff;
 }
 
-/* カード */
 .card{
   border:1px solid #ddd;
   border-radius:10px;
@@ -85,13 +79,11 @@ nav a{
   background:white;
 }
 
-/* タイトル */
 .card h3{
   color:#0078ff;
   margin-bottom:10px;
 }
 
-/* 画像 */
 img{
   width:100%;
   max-width:900px;
@@ -99,17 +91,10 @@ img{
   display:block;
 }
 
-/* Tier非表示 */
-#tierArea{
+#tierArea, #calendarArea{
   display:none;
 }
 
-/* ホーム */
-#homeArea{
-  display:block;
-}
-
-/* フッター */
 footer{
   background:#222;
   color:white;
@@ -118,7 +103,6 @@ footer{
   margin-top:30px;
 }
 
-/* レスポンシブ */
 @media(max-width:768px){
   .container{
     grid-template-columns:1fr;
@@ -142,26 +126,26 @@ footer{
 <a href="#">最新情報</a>
 <a href="#">最強ランキング</a>
 <a href="#">ストーリー</a>
-<a href="#">必殺技</a>
 <a href="#">掲示板</a>
 </nav>
 
 <div class="container">
 
-<!-- サイド -->
+<!-- サイドバー -->
 <div class="sidebar">
 
 <h2>攻略メニュー</h2>
 
 <ul class="menu">
+
 <li>🏠 トップ</li>
 
 <li onclick="showTier()">🏆 選手Tier表</li>
 
+<li onclick="showCalendar()">📅 試練カレンダー</li>
+
 <li>🎁 リセマラ</li>
 <li>👥 キャラ一覧</li>
-<li>⚽ 必殺技一覧</li>
-<li>📖 ストーリー攻略</li>
 <li>🎮 初心者ガイド</li>
 
 </ul>
@@ -171,20 +155,7 @@ footer{
 <!-- メイン -->
 <div class="content">
 
-<!-- Tier -->
-<div id="tierArea">
-  <div class="card">
-    <h3>選手Tier表</h3>
-
-    <img src="IMG_8889.jpeg">
-
-    <br><br>
-
-    <button onclick="goHome()">ホームに戻る</button>
-  </div>
-</div>
-
-<!-- ホーム -->
+<!-- HOME -->
 <div id="homeArea">
 
 <div class="card">
@@ -202,18 +173,44 @@ footer{
 </div>
 
 <div class="card">
-<h3>おすすめ攻略記事</h3>
-
+<h3>おすすめ攻略</h3>
 <ul>
 <li>序盤攻略</li>
 <li>リセマラランキング</li>
 <li>最強チーム編成</li>
-<li>おすすめ育成方法</li>
+<li>育成方法</li>
 <li>全キャラ一覧</li>
 </ul>
+</div>
 
 </div>
 
+<!-- Tier -->
+<div id="tierArea">
+
+<div class="card">
+<h3>選手Tier表</h3>
+
+<img src="IMG_8889.jpeg">
+
+<br><br>
+
+<button onclick="goHome()">ホームに戻る</button>
+</div>
+
+</div>
+
+<!-- 試練カレンダー -->
+<div id="calendarArea">
+
+<div class="card">
+<h3>試練カレンダー</h3>
+
+<img src="IMG_8887.jpeg">
+
+<br><br>
+
+<button onclick="goHome()">ホームに戻る</button>
 </div>
 
 </div>
@@ -225,15 +222,25 @@ footer{
 </footer>
 
 <script>
+
 function showTier() {
   document.getElementById("tierArea").style.display = "block";
   document.getElementById("homeArea").style.display = "none";
+  document.getElementById("calendarArea").style.display = "none";
+}
+
+function showCalendar() {
+  document.getElementById("calendarArea").style.display = "block";
+  document.getElementById("homeArea").style.display = "none";
+  document.getElementById("tierArea").style.display = "none";
 }
 
 function goHome() {
-  document.getElementById("tierArea").style.display = "none";
   document.getElementById("homeArea").style.display = "block";
+  document.getElementById("tierArea").style.display = "none";
+  document.getElementById("calendarArea").style.display = "none";
 }
+
 </script>
 
 </body>
