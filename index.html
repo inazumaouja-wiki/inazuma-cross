@@ -71,6 +71,7 @@ nav a{
   background:#f0f6ff;
 }
 
+/* カード */
 .card{
   border:1px solid #ddd;
   border-radius:10px;
@@ -92,7 +93,7 @@ img{
   display:block;
 }
 
-/* 非表示エリア */
+/* 非表示 */
 #tierArea,
 #calendarArea,
 #trainingArea{
@@ -142,16 +143,10 @@ footer{
 
 <ul class="menu">
 
-<li>🏠 トップ</li>
-
+<li onclick="goHome()">🏠 トップ</li>
 <li onclick="showTier()">🏆 選手Tier表</li>
-
 <li onclick="showCalendar()">📅 試練カレンダー</li>
-
 <li onclick="showTraining()">📘 育成ガイド</li>
-
-<li>🎁 リセマラ</li>
-<li>🎮 初心者ガイド</li>
 
 </ul>
 
@@ -181,49 +176,49 @@ footer{
 
 <!-- Tier -->
 <div id="tierArea">
-
 <div class="card">
 <h3>選手Tier表</h3>
-
 <img src="IMG_8889.jpeg">
-
 <br><br>
-
 <button onclick="goHome()">ホームに戻る</button>
 </div>
-
 </div>
 
 <!-- 試練カレンダー -->
 <div id="calendarArea">
-
 <div class="card">
 <h3>試練カレンダー</h3>
-
 <img src="IMG_8887.jpeg">
-
 <br><br>
-
 <button onclick="goHome()">ホームに戻る</button>
 </div>
-
 </div>
 
-<!-- 育成ガイド -->
+<!-- 育成ガイド（★ここが改善ポイント） -->
 <div id="trainingArea">
 
 <div class="card">
-<h3>育成ガイド</h3>
-
+<h3>育成ガイド①</h3>
 <img src="IMG_8904.jpeg">
-<img src="IMG_8903.jpeg">
-<img src="IMG_8902.jpeg">
-<img src="IMG_8900.jpeg">
-
-<br><br>
-
-<button onclick="goHome()">ホームに戻る</button>
 </div>
+
+<div class="card">
+<h3>育成ガイド②</h3>
+<img src="IMG_8903.jpeg">
+</div>
+
+<div class="card">
+<h3>育成ガイド③</h3>
+<img src="IMG_8902.jpeg">
+</div>
+
+<div class="card">
+<h3>育成ガイド④</h3>
+<img src="IMG_8900.jpeg">
+</div>
+
+<br>
+<button onclick="goHome()">ホームに戻る</button>
 
 </div>
 
