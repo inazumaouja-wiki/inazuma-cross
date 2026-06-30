@@ -91,9 +91,11 @@ img{
   display:block;
 }
 
+/* 非表示 */
 #tierArea,
 #calendarArea,
-#trainingArea{
+#trainingArea,
+#newsArea{
   display:none;
 }
 
@@ -125,7 +127,6 @@ footer{
 </header>
 
 <nav>
-<a href="#">最新情報</a>
 <a href="#">ストーリー</a>
 <a href="#">掲示板</a>
 </nav>
@@ -143,6 +144,7 @@ footer{
 <li onclick="showTier()">🏆 選手Tier表</li>
 <li onclick="showCalendar()">📅 試練カレンダー</li>
 <li onclick="showTraining()">📘 育成ガイド</li>
+<li onclick="showNews()">📰 最新情報</li>
 
 </ul>
 
@@ -155,25 +157,8 @@ footer{
 <div id="homeArea">
 
 <div class="card">
-<h3>最新情報</h3>
+<h3>ようこそ</h3>
 <p>イナズマイレブン クロス攻略Wiki制作中！</p>
-</div>
-
-<!-- ★ここにシミュレーター入れた -->
-<div class="card">
-<h3>シミュレーター</h3>
-
-<iframe 
-  src="https://inaire-asset.vercel.app/#/"
-  style="width:100%; height:700px; border:none;">
-</iframe>
-
-<br><br>
-
-<a href="https://inaire-asset.vercel.app/#/" target="_blank">
-  別タブで開く
-</a>
-
 </div>
 
 </div>
@@ -200,6 +185,7 @@ footer{
 
 <!-- 育成ガイド -->
 <div id="trainingArea">
+
 <div class="card">
 <h3>育成ガイド①</h3>
 <img src="IMG_8904.jpeg">
@@ -224,43 +210,68 @@ footer{
 <button onclick="goHome()">ホームに戻る</button>
 </div>
 
+<!-- 最新情報（X埋め込み） -->
+<div id="newsArea">
+
+<div class="card">
+<h3>最新情報（公式X）</h3>
+
+<a class="twitter-timeline"
+   data-height="700"
+   href="https://twitter.com/inazuma_cross">
+  Tweets by inazuma_cross
+</a>
+
+</div>
+
+</div>
+
 </div>
 
 <footer>
 © 2026 イナズマイレブン クロス攻略Wiki
 </footer>
 
+<!-- JS -->
 <script>
 
 function showTier() {
+  hideAll();
   document.getElementById("tierArea").style.display = "block";
-  document.getElementById("calendarArea").style.display = "none";
-  document.getElementById("trainingArea").style.display = "none";
-  document.getElementById("homeArea").style.display = "none";
 }
 
 function showCalendar() {
+  hideAll();
   document.getElementById("calendarArea").style.display = "block";
-  document.getElementById("tierArea").style.display = "none";
-  document.getElementById("trainingArea").style.display = "none";
-  document.getElementById("homeArea").style.display = "none";
 }
 
 function showTraining() {
+  hideAll();
   document.getElementById("trainingArea").style.display = "block";
-  document.getElementById("tierArea").style.display = "none";
-  document.getElementById("calendarArea").style.display = "none";
-  document.getElementById("homeArea").style.display = "none";
+}
+
+function showNews() {
+  hideAll();
+  document.getElementById("newsArea").style.display = "block";
 }
 
 function goHome() {
+  hideAll();
   document.getElementById("homeArea").style.display = "block";
+}
+
+function hideAll() {
+  document.getElementById("homeArea").style.display = "none";
   document.getElementById("tierArea").style.display = "none";
   document.getElementById("calendarArea").style.display = "none";
   document.getElementById("trainingArea").style.display = "none";
+  document.getElementById("newsArea").style.display = "none";
 }
 
 </script>
+
+<!-- Xウィジェット -->
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </body>
 </html>
