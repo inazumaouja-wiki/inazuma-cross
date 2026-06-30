@@ -95,16 +95,6 @@ footer{
   padding:20px;
   margin-top:30px;
 }
-
-@media(max-width:768px){
-  .container{
-    grid-template-columns:1fr;
-  }
-
-  nav{
-    flex-wrap:wrap;
-  }
-}
 </style>
 
 </head>
@@ -125,12 +115,12 @@ footer{
 
 <div class="container">
 
-<!-- サイドメニュー -->
 <div class="sidebar">
 
 <h2>攻略メニュー</h2>
 
 <ul class="menu">
+
 <li>🏠 トップ</li>
 
 <li onclick="showTier()">🏆 選手Tier表</li>
@@ -140,29 +130,30 @@ footer{
 <li>⚽ 必殺技一覧</li>
 <li>📖 ストーリー攻略</li>
 <li>🎮 初心者ガイド</li>
+
 </ul>
 
 </div>
 
-<!-- メイン -->
 <div class="content">
 
-<!-- Tier表示エリア -->
+<!-- Tier表示 -->
 <div id="tierArea">
 
-  <div class="card">
-    <h3>選手Tier表</h3>
+<div class="card">
+<h3>選手Tier表</h3>
 
-    <img src="tier.png" style="max-width:100%;">
+<!-- ★ここが画像 -->
+<img src="IMG_8889.jpeg" style="max-width:100%;">
 
-    <br><br>
+<br><br>
 
-    <button onclick="goHome()">ホームに戻る</button>
-  </div>
+<button onclick="goHome()">ホームに戻る</button>
+</div>
 
 </div>
 
-<!-- 通常表示 -->
+<!-- ホーム -->
 <div id="homeArea">
 
 <div class="card">
